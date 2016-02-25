@@ -8,9 +8,6 @@
       "email": "kubalicious@gmail.com"
     }
   ],
-  "require": {
-    "phpunit/phpunit": "4.8.x-dev"
-  },
   "autoload": {
     "psr-4": {
       "kubacode\\telstraSMS\\": "src/"
