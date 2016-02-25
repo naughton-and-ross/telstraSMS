@@ -68,6 +68,10 @@ class telstraSMS
     public function send($to, $body)
     {
         $to = $this->formatNumber($to);
+        
+        if (strlen(utf8_decode($body)) > 160) {
+            $body = substr($body,0,157).'...';
+        }
 
         $response = $this->client->post('sms/messages', [
                'headers' => [
